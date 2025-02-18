@@ -55,5 +55,11 @@ function storePassword(name, pass1, pass2) {
   }
 }
 
+console.log(validatePassword("helloworld", "hello")) // returns false
+console.log(validatePassword("hello", "hello")) // returns false
+console.log(validatePassword("hello1234", "hello1234")) // returns false
+console.log(validatePassword("Hello1234", "Hello1234")) // returns true
+console.log(validatePassword("HELLO1234", "HELLO1234")) // returns false
+
 console.log(storePassword("John", "Pass1234", "Pass1234")) // returns {name: "John", newpassword:"4321ssaP"}
 console.log(storePassword("John", "Pass123", "Pass12345")) // returns {name: "John", newpassword:"Pass123"}
