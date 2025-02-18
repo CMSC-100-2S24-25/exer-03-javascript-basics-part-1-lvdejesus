@@ -6,6 +6,9 @@ function inAlphabet(alphabet, char) {
   return false;
 }
 
+// Returns true if the two passwords match, the length is at least 8,
+// and if there is at least 1 number, 1 uppercase character, and 1 lowercase
+// character.
 function validatePassword(first, second) {
   if (first != second) return false;
   if (first.length < 8) return false;
@@ -28,6 +31,7 @@ function validatePassword(first, second) {
   return hasLower && hasUpper && hasNumber;
 }
 
+// Returns the reverse of the given string.
 function reversePassword(pass) {
   reversed = ""
   for (let i = pass.length - 1; i >= 0; i--) {
@@ -36,6 +40,7 @@ function reversePassword(pass) {
   return reversed;
 }
 
+// Returns an object containing the name and the new password.
 function storePassword(name, pass1, pass2) {
   if (validatePassword(pass1, pass2)) {
     return {
